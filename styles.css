@@ -1,0 +1,32 @@
+/* * {
+
+} */
+/* html, body {
+    width: 100%;
+    height: 100%;
+} */
+body {
+    color: #f5f5dc;
+    font-family: 'Cinzel Decorative', serif;
+    margin-top: 4em;
+    padding: 0;
+    background-color: #0f2c2c;
+    background-image: url('./images/pattern.jpg');
+    background-repeat: repeat;
+    background-size: 50rem 50rem;
+}
+.container {
+    background-image: url('./images/pngegg.png');
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-color: #5e0404ea;
+    border-radius: 25px;
+    border-width: 1em solid;
+    border-color: white;
+    width: 80%;
+    min-height: 80%;
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
