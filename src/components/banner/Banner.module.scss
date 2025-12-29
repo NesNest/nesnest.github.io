@@ -1,0 +1,12 @@
+.banner {
+  background: linear-gradient(to bottom right, #738cd1, #07362c);
+  color: white;
+
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}

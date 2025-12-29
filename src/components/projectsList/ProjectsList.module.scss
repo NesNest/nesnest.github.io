@@ -1,0 +1,13 @@
+.projects-list {
+  background-color: white;
+  height: 60vh;
+  margin: 5rem 10rem;
+  &__container {
+    border: black 2px solid;
+    border-radius: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem;
+  }
+}
