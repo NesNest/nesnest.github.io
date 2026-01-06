@@ -1,3 +1,7 @@
 
 #npm package files
 node_modules/
+
+#build output
+dist/
+

@@ -1,12 +1,53 @@
 .banner {
-  background: linear-gradient(to bottom right, #738cd1, #07362c);
-  color: white;
-
+  position: sticky;
+  top: 0;
   height: 100vh;
 
+  background: linear-gradient(
+    180deg,
+    #1aa39a 0%,
+    #0b5f5a 35%,
+    #0f3d3a 65%,
+    #050b0a 100%
+  );
+  color: white;
+
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
+  flex-direction: column;
+  text-align: center;
+
+  z-index: 1;
+
+  @media (max-width: 1200px) {
+    height: auto;
+    min-height: 100vh;
+    align-items: stretch;
+  }
+  @media (max-width: 600px) {
+    img {
+      width: 10rem;
+      height: 10rem;
+    }
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+  }
+  &__container--info {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  img {
+    width: 15rem;
+    height: 15rem;
+  }
 }
