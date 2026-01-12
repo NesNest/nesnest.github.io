@@ -1,8 +1,19 @@
+@use "./../../styles/variables" as var;
 .footer {
+  color: white;
   position: relative;
   height: 10vh;
-  background: red;
+  background-color: var.$primary-color;
   z-index: 1;
   scroll-snap-align: start;
-  //   padding-top: 1rem;
+  &__container {
+    text-align: center;
+    background-color: var.$secondary-color;
+    height: 100%;
+    margin: 0rem 2rem;
+    border-radius: 20px 20px 0 0;
+  }
+  p {
+    margin: 0;
+  }
 }

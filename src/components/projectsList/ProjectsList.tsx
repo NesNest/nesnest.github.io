@@ -11,13 +11,19 @@ const ProjectsList = () => {
             className={styles["card"]}
             href="https://nesnest.github.io/MicoMind/"
           >
-            <h2> Micomind</h2>
+            <img
+              src="./../../../public/pagesImages/micomind_img.png"
+              alt="MicoMind"
+            />
           </PageLink>
           <PageLink
             className={styles["card"]}
             href="https://nesnest.github.io/MenuCraft/"
           >
-            <h2>MenuCraft</h2>
+            <img
+              src="./../../../public/pagesImages/menucraft_img.png"
+              alt="Menucraft"
+            />
           </PageLink>
         </div>
       </div>
