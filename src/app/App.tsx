@@ -1,14 +1,18 @@
-import Banner from "../components/banner/Banner.tsx";
-import ProjectsList from "../components/projectsList/ProjectsList.tsx";
-import Footer from "../components/footer/Footer.tsx";
+import MainLayout from "../components/Layouts/MainLayout.tsx";
+import { Routes, Route } from "react-router-dom";
+import Home from "../pages/Home.tsx";
+import Projects from "../pages/Projects.tsx";
+import Contact from "../pages/Contact.tsx";
 
 function App() {
   return (
-    <>
-      <Banner />
-      <ProjectsList />
-      <Footer />
-    </>
+    <Routes>
+      <Route path="/" element={<MainLayout />}>
+        <Route index element={<Home />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/contact" element={<Contact />} />
+      </Route>
+    </Routes>
   );
 }
 
