@@ -5,10 +5,9 @@ const Banner = () => {
   return (
     <div className={style["banner"]}>
       <div className={style["banner__container"]}>
-        <h1>Néstor Alejandro Guerrero Molina</h1>
-
         <div className={style["banner__container__info"]}>
-          <img src="./../../prueba.jpg" alt="profile img" />
+          <img src="src/assets/nestorphoto.jpeg" alt="profile img" />
+
           <p>
             Me interesa la tecnología no solo como herramienta, sino como
             sistema: entender cómo funciona, por qué funciona y cómo construirla

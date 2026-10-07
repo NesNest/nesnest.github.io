@@ -1,50 +1,77 @@
+@use "./../../styles/variables" as var;
+
 .header {
-  background-color: #f5f5f5;
-  padding: 1rem 2rem;
+  background-color: var.$primary-color;
+  padding: 1rem 6rem;
   display: flex;
   justify-content: center;
   border-bottom: 2px solid #ddd;
-}
+  @include var.deco-border;
 
-.header-content {
-  width: 100%;
-  max-width: 1200px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+  @media (max-width: 992px) {
+    padding: 0 1rem;
+    // margin: 0 1rem;
+  }
 
-.title {
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: #222;
-}
+  &__button {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    span {
+      display: block;
+      height: 0.25rem;
+      width: 100%;
+      background-color: var.$background;
+      border-radius: 4px;
+      transition: all 0.3s ease-in-out;
+      transform-origin: left center;
+    }
+    @media (max-width: 768px) {
+      display: flex;
+    }
+  }
+  &__button--active {
+    span {
+      &:nth-child(1) {
+        transform: rotate(45deg); // Gira la línea superior hacia abajo
+      }
 
-.nav {
-  display: flex;
-  gap: 1rem;
-}
+      &:nth-child(2) {
+        width: 0%; // Desvanece la línea del medio encogiéndola
+        opacity: 0;
+      }
 
-.cv-button {
-  background-color: #007acc;
-  color: white;
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
-  text-decoration: none;
-  font-weight: 500;
-  transition: background-color 0.3s ease;
-}
+      &:nth-child(3) {
+        transform: rotate(-45deg); // Gira la línea inferior hacia arriba
+      }
+    }
+  }
 
-.cv-button:hover {
-  background-color: #005fa3;
-}
+  &__content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    @media (max-width: 760px) {
+      padding: 0.5rem 1rem;
+    }
 
-.link {
-  color: #007acc;
-  text-decoration: none;
-  font-weight: 500;
-}
+    &__title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var.$background;
 
-.link:hover {
-  text-decoration: underline;
+      @media (max-width: 480px) {
+        font-size: 1.3rem;
+        text-align: center;
+      }
+    }
+  }
 }

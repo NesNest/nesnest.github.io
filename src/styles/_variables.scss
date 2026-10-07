@@ -1,33 +1,38 @@
-$primary-color: #e6edf3;
-$secondary-color: #0b1f2a;
+// Colors
+$white: #ffffff;
+$beige: #e3d2b6;
+$gray-light: #4b5755;
+$magenta: #ab2e79;
+$gray-dark: #394750;
+$pink-light: #ffb9d2;
+$text: #000000;
+$gold: #b8860b;
+// d94e73
 
-$bg-main: #0b1f2a; // azul océano profundo
-$bg-section: #102a3a; // acero mojado
-$bg-surface: #142f40; // panels / cards oscuras
-
-// Primary (luz bajo el mar)
-$primary: #1e6f8b; // azul atlántico
-$primary-soft: #4fa3b8; // reflejo de luz marina
-$primary-muted: #2e5566;
-
-// Accent (art déco / rapture)
-$accent: #c9a24d; // latón / oro envejecido
-$accent-soft: #f1e2b8;
+// Backgrounds
+$background: $beige;
+$primary-color: $gray-dark;
+$secondary-color: $gray-light;
 
 // Texto
-$text-main: #e6edf3; // blanco frío
-$text-muted: #9fb6c3; // gris azulado
-$text-inverse: #0b1f2a;
-$primary: #0f172a; // azul muy oscuro (casi negro)
-$primary-soft: #334155; // texto secundario
-$primary-muted: #64748b; // texto auxiliar
+$text-main: $text;
+$text-muted: $gray-dark;
+$text-inverse: $white;
 
-// Accent (usar con MUCHA moderación)
-$accent: #2563eb; // azul profesional
-$accent-soft: #dbeafe;
+// Accent
+$accent: $magenta;
+$accent-soft: $pink-light;
 
 // Borders & shadows
-
 $shadow-soft: 0 6px 18px rgba(15, 23, 42, 0.08);
 $font-stack: "Roboto", sans-serif;
 $border-radius: 8px;
+
+// mixin
+@mixin deco-border {
+  border: 4px solid $gray-light;
+  border-radius: 8px;
+  box-shadow: 0 0 0 6px $gray-dark;
+  outline: 4px solid $gray-light; // segunda línea separada
+  outline-offset: 4px;
+}

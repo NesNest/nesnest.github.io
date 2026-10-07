@@ -1,7 +1,19 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
+    <meta
+      charset="UTF-8"
+      ,
+      http-equiv="Content-Security-Policy"
+      content="
+        <!-- default-src 'self';  -->
+        <!-- script-src 'self';  -->
+        style-src 'self'; 
+        img-src 'self' data:; 
+        object-src 'none';
+        base-uri 'self'; "
+    />
+
     <link rel="icon" type="image/svg+xml/png" href="/nene_icon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Néstor Guerrero</title>

@@ -1,18 +1,8 @@
 @use "./../../styles/variables" as var;
 
 .banner {
-  // position: sticky;
-  // top: 0;
-  height: 100vh;
-  // background: linear-gradient(
-  //   180deg,
-  //   #1aa39a 0%,
-  //   #0b5f5a 35%,
-  //   #0f3d3a 65%,
-  //   #050b0a 100%
-  // );
-  background-color: var.$primary-color;
-
+  height: 80vh;
+  background-color: var.$background;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -53,21 +43,34 @@
     &__info {
       display: flex;
       flex-wrap: wrap;
-      justify-content: center;
-      gap: 1rem;
-      background-color: black;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 1.5rem;
+
+      background-color: var.$primary-color;
+      filter: contrast(110%) brightness(95%);
+      padding: 2rem;
+      max-width: 1000px;
+
+      @media (max-width: 600px) {
+        padding: 1rem;
+        justify-content: center;
+      }
 
       p {
-        background: rgba(255, 255, 255, 0.2);
         backdrop-filter: blur(10px);
         -webkit-backdrop-filter: blur(10px);
-        border-radius: 10px;
-        border: 1px solid rgba(255, 255, 255, 0.3);
-        box-shadow: 10px 40px 30px rgba(0, 0, 0, 0.1);
+        border-radius: var.$border-radius;
+        box-shadow: var.$shadow-soft;
 
+        margin: 0;
         padding: 20px;
-        color: #fff;
+        color: var.$text-inverse;
         max-width: 600px;
+        min-width: 300px;
+        order: 2;
+        flex: 1;
+
         text-align: justify;
         font-size: 1.2rem;
 
@@ -80,7 +83,10 @@
         margin: 2rem;
         width: 15rem;
         height: 15rem;
-        border: 1px solid rgba(255, 255, 255, 0.3);
+        border: 1px solid rgba(var.$white, 0.3);
+        border-radius: 5%;
+        object-fit: cover;
+        order: 1;
 
         @media (max-width: 1200px) {
           margin: 3rem 1rem;
