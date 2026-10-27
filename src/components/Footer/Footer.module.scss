@@ -4,8 +4,13 @@
   color: white;
   position: relative;
   height: 21rem;
-  background-color: var.$background;
-
+  background: linear-gradient(
+    to top,
+    var.$gray-dark 0%,
+    var.$gray-dark 20%,
+    var.$background 30%,
+    var.$background 100%
+  );
   p {
     position: absolute;
     bottom: 0;

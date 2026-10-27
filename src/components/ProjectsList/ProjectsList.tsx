@@ -1,24 +1,23 @@
 import styles from "./ProjectsList.module.scss";
-import PageLink from "../PageLink/PageLink";
+import ProjectCard from "../Cards/ProjectCard/ProjectCard";
 
 const ProjectsList = () => {
   return (
     <>
       <div className={styles["projects-list"]}>
-        <h1>Paginas</h1>
+        <h2>Paginas</h2>
         <div className={styles["projects-list__container"]}>
-          <PageLink
-            className={styles["card"]}
+          <ProjectCard
             href="https://nesnest.github.io/MicoMind/"
-          >
-            <img src="/pagesImages/micomind_img.png" alt="MicoMind" />
-          </PageLink>
-          <PageLink
-            className={styles["card"]}
+            imageSrc="/pagesImages/micomind_img.png"
+            title="MicoMind"
+          />
+
+          <ProjectCard
             href="https://nesnest.github.io/MenuCraft/"
-          >
-            <img src="/pagesImages/menucraft_img.png" alt="Menucraft" />
-          </PageLink>
+            imageSrc="/pagesImages/menucraft_img.png"
+            title="MenuCraft"
+          />
         </div>
       </div>
     </>

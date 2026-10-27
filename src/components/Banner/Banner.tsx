@@ -1,12 +1,12 @@
 import style from "./Banner.module.scss";
-// import
+import nestorPhoto from "./../../assets/profile/nestorphoto.jpeg";
 
 const Banner = () => {
   return (
     <div className={style["banner"]}>
       <div className={style["banner__container"]}>
         <div className={style["banner__container__info"]}>
-          <img src="src/assets/nestorphoto.jpeg" alt="profile img" />
+          <img src={nestorPhoto} alt="profile img" />
 
           <p>
             Me interesa la tecnología no solo como herramienta, sino como

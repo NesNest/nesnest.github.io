@@ -10,7 +10,6 @@ const certificates: Certificate[] = [
     title: "Scrum Fundamentals",
     image: "/certifications/ScrumFundamentalsCertified.png",
   },
-  // si conviertes otros PDFs a imagen, los agregas aquí
 ];
 
 export default function CertificatesList() {
