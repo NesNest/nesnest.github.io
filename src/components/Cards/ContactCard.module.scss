@@ -1,0 +1,10 @@
+.contact-container {
+  margin: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 59dvh;
+  @media (max-height: 600px) {
+    height: 100dvh;
+  }
+}

@@ -1,0 +1,123 @@
+.cert-section {
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+  margin: 10rem 5rem;
+  h2 {
+    font-size: 200%;
+    margin: 0 5rem;
+  }
+  &__grid {
+    padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 2rem;
+  }
+  &__card {
+    margin-bottom: 3rem;
+    font-weight: 500;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 32rem;
+    height: auto;
+
+    cursor: pointer;
+    h3 {
+      margin: 1rem 0 0 0;
+    }
+  }
+  &__image {
+    width: 100%;
+    height: 18rem;
+    object-fit: contain;
+    transition: transform 0.2s ease;
+
+    &:hover {
+      transform: scale(1.02);
+    }
+  }
+
+  @media (max-width: 1200px) {
+    text-align: center;
+    margin: 0;
+
+    &__grid {
+      margin: 0 2rem;
+      padding: 0;
+      gap: 0.5rem;
+    }
+    h3 {
+      font-size: small;
+    }
+    &__image {
+      margin-top: 1rem;
+      height: auto;
+    }
+  }
+}
+
+.cert-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  cursor: zoom-out;
+  animation: certFadeIn 0.2s ease-out;
+
+  &__content {
+    max-width: 90%;
+    max-height: 80vh;
+    object-fit: contain;
+    border-radius: 6px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    animation: certZoomIn 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+    cursor: default;
+  }
+  &__close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: #ffffff;
+    font-size: 45px;
+    font-weight: 200;
+    background: none;
+    border: none;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.2s ease;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+@keyframes certFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes certZoomIn {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

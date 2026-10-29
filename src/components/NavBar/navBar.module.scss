@@ -43,9 +43,9 @@
 
     justify-content: center;
     opacity: 0;
-    pointer-events: none; // Evita que se pueda clickear mientras está invisible
+    pointer-events: none;
     transform: translateY(-20px);
-    transition: all 0.4s ease-in-out; // Animación suave tipo cortina
+    transition: all 0.4s ease-in-out;
 
     &__container {
       flex-direction: column;

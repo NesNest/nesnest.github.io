@@ -5,7 +5,7 @@ import React from "react";
 
 export default function DevelopCard(): React.ReactElement {
   return (
-    <div className="develop-card">
+    <div>
       <PresentationCard
         mainImage={nestorAvatar}
         title="Mis repositorios"

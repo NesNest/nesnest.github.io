@@ -27,4 +27,13 @@
     background-repeat: no-repeat;
     background-position: center bottom;
   }
+  @media (max-width: 1200px) {
+    background: linear-gradient(
+      to top,
+      var.$gray-dark 0%,
+      var.$gray-dark 5%,
+      var.$background 20%,
+      var.$background 100%
+    );
+  }
 }
